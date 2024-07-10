@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game</title>
+</head>
+    <body>
+        <style>
+            
+            .green{
+            background-color: #008900;
+            }
+            .red{
+            background-color: #FF0000;
+            }
+            .blue{
+            background-color: #66CCFF;
+            }
+            .yellow{
+            background-color: #FFCC00;
+            }
+            .row{
+            display: flex;
+            }
+            .board{
+            width: fit-content;
+            border: 10px solid #11262e;
+            border-radius: 5px;
+            margin: 90px auto;
+            }
+            .white-box{
+            background-color: white;
+                width: 150px;
+                height: 150px;
+                margin: 20% auto;
+                border: 1px solid black;
+            }
+            .red-box{
+            background-color: #FF0000;
+                width: 250px;
+                height: 250px;
+                border: 1px solid black;
+            }
+            .green-box{
+                background-color: #009900;
+                width: 250px;
+                height: 250px;
+                border: 1px solid black;
+            }
+            .blue-box{
+            background-color: #66CCFF;
+                width: 250px;
+                height: 250px;
+                border:1px solid black;
+            }
+            .yellow-box{
+            background-color: #FFCC00;
+                width: 250px;
+                height: 250px;
+                border:1px solid #000;
+            }
+            .white-box .circle{
+            border-radius: 1%;
+                width: 40px;
+                height: 40px;
+                float: left;
+                margin: 16px;
+                border: 1px solid rgb(0, 0, 0);
+            }
+            .cell{
+                width: 40px;
+                height: 40px;
+                border: 1px solid #000;
+            }
+            .destination{
+            border-top: 63px solid #009900;
+                border-left: 63px solid #FF0000;
+                border-right: 63px solid #FFCC00;
+                border-bottom: 63px solid #66CCFF;
+            }
+
+        </style>
+        <div class="body">
+
+        </div>
+        
+    <div class="board">
+        <div class="row">
+        <div class="red-box">
+            <div class="white-box">
+            <div class="red circle"></div>
+            <div class="red circle"></div>
+            <div class="red circle"></div>
+            <div class="red circle"></div>
+            </div>
+        </div>
+        <div class="cell-container">
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell green"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            </div>
+        </div>
+        <div class="green-box">
+            <div class="white-box">
+            <div class="green circle"></div>
+            <div class="green circle"></div>
+            <div class="green circle"></div>
+            <div class="green circle"></div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell-container">
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell red"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell red"></div>
+            <div class="cell red"></div>
+            <div class="cell red"></div>
+            <div class="cell red"></div>
+            <div class="cell red"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </div>
+        </div>
+        <div class="destination"></div>
+        <div class="cell-container">
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell yellow"></div>
+            <div class="cell yellow"></div>
+            <div class="cell yellow"></div>
+            <div class="cell yellow"></div>
+            <div class="cell yellow"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell yellow"></div>
+            <div class="cell"></div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="blue-box">
+            <div class="white-box">
+            <div class="blue circle"></div>
+            <div class="blue circle"></div>
+            <div class="blue circle"></div>
+            <div class="blue circle"></div>
+            </div>
+        </div>
+        <div class="cell-container">
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell blue"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell blue"></div>
+            <div class="cell "></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell blue"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell blue"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell blue"></div>
+            <div class="cell blue"></div>
+            <div class="cell"></div>
+            </div>
+            <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </div>
+        </div>
+        <div class="yellow-box">
+            <div class="white-box">
+            <div class="yellow circle"></div>
+            <div class="yellow circle"></div>
+            <div class="yellow circle"></div>
+            <div class="yellow circle"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+      
+  <div class="board">
+
+    </div>
+    <div class="dice-roll">
+        <button onclick="rollDice()">Lancer les dés</button>
+        <div id="dice-results"> 
+
+        </div>
+    </div>
+
+    <script>
+      
+        function rollDice() {
+            var dice1 = Math.floor(Math.random() * 6) + 1; 
+            var diceResults = document.getElementById("dice-results");
+            diceResults.innerHTML = ""; 
+
+            var diceResult1 = document.createElement("span");
+            diceResult1.textContent = dice1;
+            diceResults.appendChild(diceResult1);
+
+            var diceResult2 = document.createElement("span");
+            diceResult2.textContent = dice2;
+            diceResults.appendChild(diceResult2);
+        }
+    </script>
+    </body>
+</html>
